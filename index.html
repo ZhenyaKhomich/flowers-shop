@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="node_modules/wow.js/css/">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <title>Flowers shop</title>
+</head>
+<body>
+<div class="header">
+    <div class="container header__container">
+        <div class="header__logo">
+            <img class="header__logo-img" src="assets/images/logo.png" alt="logo">
+            <span class="header__logo-text">Florarium</span>
+        </div>
+        <div class="header__menu-wrap">  <!--open-->
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item"><a href="#ourPlants" class="header__menu-link">Флорариумы</a></li>
+                    <li class="header__menu-item"><a href="#gift" class="header__menu-link">Акции</a></li>
+                    <li class="header__menu-item"><a href="#work" class="header__menu-link">Как мы работаем</a></li>
+                    <li class="header__menu-item"><a href="#conditions" class="header__menu-link">Доставка и оплата</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="button header__button orderCall">Заказать звонок</button>
+        </div>
+        <div class="header__burger">
+            <span class="burger-line"></span>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <section class="main__garden garden">
+        <div class="container garden__container">
+            <div class="garden__info">
+                <h1 class="garden__title wow animate__heartBeat">Сад для вашего дома
+                    в Краснодаре</h1>
+                <div class="garden__text">Делайте сюрпризы для своих любимых незабываемыми вместе с Florarium!</div>
+                <a href="src/html/florariums.html" class="button garden__button">Посмотреть флорариумы</a>
+                <div class="garden__advantages">
+                    <div class="garden__advantage">
+                        <div class="garden__advantage-img garden__ecology">
+                            <img src="assets/images/garden/ecology.png" alt="ecology">
+                        </div>
+                        <span class="garden__advantage-text">Очень неприхотливы
+                        <br>и просты в уходе</span>
+                    </div>
+                    <div class="garden__advantage">
+                        <div class="garden__advantage-img">
+                            <img src="assets/images/garden/water.png" alt="water">
+                        </div>
+                        <span class="garden__advantage-text">Поливать раз в неделю</span>
+                    </div>
+                    <div class="garden__advantage">
+                        <div class="garden__advantage-img garden__clock">
+                            <img src="assets/images/garden/clock.png" alt="clock">
+                        </div>
+                        <span class="garden__advantage-text">Доставим бесплатно
+                        <br>в любое время дня и ночи</span>
+                    </div>
+                </div>
+            </div>
+            <div class="garden__image wow animate__jackInTheBox">
+                <img class="garden__image-big" src="assets/images/flowersBig.png" alt="flowers big">
+            </div>
+        </div>
+    </section>
+    <section class="main__about about">
+        <div class="container about__container">
+            <h2 class="about__title section-title">О нас</h2>
+            <div class="about__info">
+                <div class="about__info-one">
+                    <div class="about__image wow animate__rotateIn">
+                        <img src="assets/images/aboutFlow1.png" alt="picture1">
+                    </div>
+                    <div class="about__text about__text-top">Мы влюбленны в цветы и в свою работу. На протяжении 8 лет
+                        мы создаем
+                        красоту из живых цветов, составляем композиции из эхеверии и крассулы эксперементируем с
+                        формами, цветами и сочетаниями.
+                    </div>
+                </div>
+                <div class="about__info-two">
+                    <div class="about__image about__image-bottom wow animate__rotateIn">
+                        <img src="assets/images/aboutFlow2.png" alt="picture2">
+                    </div>
+                    <div class="about__text about__text-bottom">Мы дарим каждому клиенту настоящую радость и
+                        любовь - это миссия нашего магазина. Вдохновляясь современными тенденциями во флористике, мы
+                        придумываем что-то новое, стремимся показать самые необычные и интересные сочетания цветов. К
+                        созданию флорариумов подходим с душой и любовью.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__left-img wow animate__slideInDown">
+            <img src="assets/images/pictureLeft.png" alt="echevias">
+        </div>
+        <div class="about__right-img wow animate__slideInDown">
+            <img src="assets/images/echeveria.png" alt="echeveria">
+        </div>
+    </section>
+    <section class="main__outPlants ourPlants" id="ourPlants">
+        <div class="container ourPlants__container">
+            <h2 class="ourPlants__title-block section-title">Наши растения</h2>
+            <div class="ourPlants__categories">
+                <div class="ourPlants__florariums checked">Флорариумы</div>
+                <div class="ourPlants__orhoidariums">Орхридариумы</div>
+            </div>
+            <div class="ourPlants__carts"></div>
+            <button class="button ourPlants__button">Оформить заказ</button>
+        </div>
+    </section>
+    <section class="main__gift gift" id="gift">
+        <div class="container gift__container">
+            <div class="gift__img wow animate__zoomInDown">
+                <img class="gift__postcard" src="assets/images/postcart.png" alt="postcard">
+                <img class="gift__raffaello raffaello" src="assets/images/raffaello.png" alt="raffaello">
+            </div>
+            <div class="gift__info">
+                <h2 class="gift__title section-title">Подарок к каждому заказу
+                </h2>
+                <div class="gift__text-one gift__text">К каждому букету прилагается бесплатная <span>открытка или сладкий презент.</span>
+                </div>
+                <div class="gift__text-two gift__text">Закажите любой флорариум в период <span>с 20 апреля до 20 сентября</span>
+                    в наших
+                    магазинах и выберите в подарок открытку и большую коробку конфет Rafaello или Roshen.
+                </div>
+                <div class="gift__text-three gift__text">Это абсолютно бесплатно, потому что мы любим своих клиентов и
+                    хотим дарить
+                    вам радость так же, как вы делаете это для своих любимых!
+                </div>
+                <button class="button gift__button"><a href="src/html/florariums.html">Посмотреть флорариумы</a></button>
+            </div>
+        </div>
+        <div class="gift__top-img wow animate__rotateIn">
+            <img src="assets/images/toplistsGift.png" alt="lists">
+        </div>
+        <div class="gift__bottom-img wow animate__rotateIn">
+            <img src="assets/images/bottomlistsGift.png" alt="lists">
+        </div>
+    </section>
+    <section class="main__work work" id="work">
+        <div class="container work__container">
+            <h2 class="work__title-main section-title">Kак мы работаем</h2>
+            <div class="work__carts">
+                <!--                <div class="work__carts-top">-->
+                <div class="work__cart work__cart-one">
+                    <div class="work__cart-wrap">
+                        <div class="work__img">
+                            <img src="assets/images/work/clipboard.png" alt="order">
+                        </div>
+                        <div class="work__info">
+                            <div class="work__title">01. Сделайте заказ</div>
+                            <div class="work__text">Выберите букет и заполните форму заказа на сайте или позвоните <br>нам.
+                                Укажите способ доставки. После оформления заказа наш менеджер свяжется с вами в теченеи
+                                10 минут для уточнения деталей заказа.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__cart work__cart-three">
+                    <div class="work__cart-wrap">
+                        <div class="work__img">
+                            <img src="assets/images/work/gift-box.png" alt="box">
+                        </div>
+                        <div class="work__info">
+                            <div class="work__title">03. Ждите доставку</div>
+                            <div class="work__text">В назначенный день и время мы доставим ваш букет абсолютно
+                                бесплатно. Он будет бережно упакован и вручен вам вместе с подарками, идущими в
+                                комплекте с букетом.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__cart-wrap work__cart-two">
+                    <div class="work__img">
+                        <img src="assets/images/work/wallet.png" alt="wallet">
+                    </div>
+                    <div class="work__info">
+                        <div class="work__title">02. Оплатите</div>
+                        <div class="work__text">Вы можете оплатить букет прямо на сайте онлайн или наличными нашему
+                            курьеру.
+                        </div>
+                    </div>
+                </div>
+                <div class="work__cart-wrap work__cart-four">
+                    <div class="work__img">
+                        <img src="assets/images/work/camera.png" alt="camera">
+                    </div>
+                    <div class="work__info">
+                        <div class="work__title">04. Фотоотчет</div>
+                        <div class="work__text">Сделайте фотографию с нашим букетом, отметьте наш аккаунт в
+                            инстаграм @flowerfantasy и получите скидку 10% на следующий заказ в течение месяца.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work__left-img wow animate__slideInDown">
+            <img src="assets/images/workPictureLeft.png" alt="flower">
+        </div>
+    </section>
+    <section class="main__gallery gallery">
+        <div class="container gallery__container">
+            <h2 class="gallery__title section-title">Фотогалерея</h2>
+            <div class="gallery__photos">
+                <div class="gallery__photos-small">
+                    <img class="gallery__photo-small photo wow animate__fadeInDown"
+                         src="assets/images/gallery/photo1.png"
+                         alt="photo1">
+                    <img class="gallery__photo-small photo wow animate__fadeInDown"
+                         src="assets/images/gallery/photo2.png"
+                         alt="photo2">
+                    <img class="gallery__photo-small photo wow animate__fadeInDown"
+                         src="assets/images/gallery/photo3.png"
+                         alt="photo3">
+                    <img class="gallery__photo-small photo wow animate__fadeInDown"
+                         src="assets/images/gallery/photo4.png"
+                         alt="photo4">
+                </div>
+                <div class="gallery__photos-big">
+                    <img class="gallery__photo-big photo wow animate__fadeInDown"
+                         src="assets/images/gallery/photoBig.png"
+                         alt="photoBig">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main__feedback feedback">
+        <div class="container feedback__container">
+            <h2 class="feedback__title-block section-title">Отзывы наших клиентов</h2>
+            <div class="feedback__slider">
+                <div class="feedback__wrap">
+                    <div class="feedback__carts">
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/anton.png" alt="anton">
+                            </div>
+                            <div class="feedback__title">Антон</div>
+                            <div class="feedback__text">Ребята просто молодцы! Крутой сервис!!! Я покупаю уже несколько
+                                раз
+                                флорариумы. Всегда все отлично и четко.
+                            </div>
+                        </div>
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/dima.jpg" alt="dima">
+                            </div>
+                            <div class="feedback__title">Дима</div>
+                            <div class="feedback__text">Спасибо за ваш нелегкий труд. Цветы замечательные! Моя мама была
+                                рада. Курьер был очень вежливый и доставил все вовремя. Буду советовать друзьям!
+                            </div>
+                        </div>
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/murad.png" alt="murad">
+                            </div>
+                            <div class="feedback__title">Мурад</div>
+                            <div class="feedback__text">Спасибо большое за вашу работу. Флорариум замечательный! Моя
+                                девушка
+                                была в восторге. Доставка была вовремя и курьер был очень вежливый. Буду советовать
+                                друзьям!
+                            </div>
+                        </div>
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/kirill.png" alt="kirill">
+                            </div>
+                            <div class="feedback__title">Кирилл</div>
+                            <div class="feedback__text">Я покупал флорариум для с в подарок своей подруге. Хочу выразить
+                                свою благодарность за дополнительный подарок к покупке.
+                            </div>
+                        </div>
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/yulia.png" alt="yulia">
+                            </div>
+                            <div class="feedback__title">Юля</div>
+                            <div class="feedback__text">Молодцы! Хорошо что есть такой сервис!!! Я покупаю уже несколько
+                                раз
+                                флорариумы. Всегда отличные композиции и быстрая доставка.
+                            </div>
+                        </div>
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/lesha.png" alt="lesha">
+                            </div>
+                            <div class="feedback__title">Леша</div>
+                            <div class="feedback__text">Я покупал цветы для своей супруге. Хочу выразить свою
+                                благодарность
+                                за дополнительный подарок к покупке.
+                            </div>
+                        </div>
+                        <div class="feedback__cart">
+                            <div class="feedback__img">
+                                <img src="assets/images/feedback/petr.png" alt="petr">
+                            </div>
+                            <div class="feedback__title">Петр</div>
+                            <div class="feedback__text">Ребята, спасибо за то что делаете жизнь девушек ярче. Крутой
+                                сервис,
+                                хороший и вежливый персонал, быстрая доставка.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback__paginations">
+                    <span class="feedback__pagination feedback__pagination-seven"></span>
+                    <span class="feedback__pagination feedback__pagination-one"></span>
+                    <span class="feedback__pagination feedback__pagination-two"></span>
+                    <span class="feedback__pagination feedback__pagination-three feedback__pagination-checked"></span>
+                    <span class="feedback__pagination feedback__pagination-four"></span>
+                    <span class="feedback__pagination feedback__pagination-five"></span>
+                    <span class="feedback__pagination feedback__pagination-six"></span>
+                </div>
+            </div>
+            <div class="feedback__arrows">
+                <div class="feedback__arrow feedback__arrow-prev">
+                    <img class="feedback__arrows-prev" src="assets/images/arrows.png" alt="arrowsPrev">
+                    <img class="feedback__arrows-prev-hover" src="assets/images/arrowsHover.png" alt="arrowsPrev">
+                </div>
+                <div class="feedback__arrow feedback__arrow-next">
+                    <img class="feedback__arrows-next" src="assets/images/arrows.png" alt="arrowsNext">
+                    <img class="feedback__arrows-next-hover" src="assets/images/arrowsHover.png" alt="arrowsPrev">
+                </div>
+            </div>
+        </div>
+        <div class="feedback__right-img wow animate__slideInDown">
+            <img src="assets/images/foneFeedback.png" alt="flower">
+        </div>
+    </section>
+    <section class="main__conditions conditions" id="conditions">
+        <div class="container conditions__container">
+            <div class="conditions__delivery">
+                <h2 class="conditions__title section-title conditions__title-delivery">Доставка</h2>
+                <div class="conditions__pickup conditions__carts-style">
+                    <div class="conditions__img">
+                        <img src="assets/images/conditions/box.png" alt="box">
+                    </div>
+                    <div class="conditions__info">
+                        <div class="conditions__info-title">Самовывоз</div>
+                        <div class="conditions__text">Бесплатно по адресу: Краснодар, проспект Некрасова, д. 24. Вход со
+                            двора.
+                        </div>
+                    </div>
+                </div>
+                <div class="conditions__courier conditions__carts-style">
+                    <div class="conditions__img conditions__img-bottom">
+                        <img src="assets/images/conditions/truck.png" alt="truck">
+                    </div>
+                    <div class="conditions__info">
+                        <div class="conditions__info-title">Доставка нашим курьером</div>
+                        <div class="conditions__text conditions__text-bottom">Бесплатно по указанному вами адресу. Время
+                            доставки
+                            согласовывается с менеджером по телефону.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conditions__payment">
+                <h2 class="conditions__title section-title conditions__title-payment">Оплата</h2>
+                <div class="conditions__cart conditions__carts-style">
+                    <div class="conditions__img">
+                        <img src="assets/images/conditions/business.png" alt="business">
+                    </div>
+                    <div class="conditions__info">
+                        <div class="conditions__info-title">Оплата картой на сайте</div>
+                        <div class="conditions__text">Мы используем безопасные методы оплаты, и вы можете оплатить заказ
+                            прямо на сайте.
+                        </div>
+                    </div>
+                </div>
+                <div class="conditions__cash conditions__carts-style">
+                    <div class="conditions__img conditions__img-bottom">
+                        <img src="assets/images/conditions/wallet.png" alt="wallet">
+                    </div>
+                    <div class="conditions__info">
+                        <div class="conditions__info-title">Наличными курьеру</div>
+                        <div class="conditions__text conditions__text-bottom">Вы можете произвести оплату наличными на
+                            руки нашему курьеру и
+                            получить чек заказа.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__logo">
+            <img class="footer__logo-img" src="assets/images/logo.png" alt="logo">
+            <span class="footer__logo-text">Florarium</span>
+        </div>
+        <div class="footer__social">
+            <a href="https://vk.com/" class="footer__social-block">
+                <svg id="regular" fill="white" enable-background="new 0 0 24 24" height="40" viewBox="0 0 24 24"
+                     width="39"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="m12.145 19.5c3.472 0 2.234-2.198 2.502-2.83-.004-.472-.008-.926.008-1.202.22.062.739.325 1.811 1.367 1.655 1.67 2.078 2.665 3.415 2.665h2.461c.78 0 1.186-.323 1.389-.594.196-.262.388-.722.178-1.438-.549-1.724-3.751-4.701-3.95-5.015.03-.058.078-.135.103-.175h-.002c.632-.835 3.044-4.449 3.399-5.895.001-.002.002-.005.002-.008.192-.66.016-1.088-.166-1.33-.274-.362-.71-.545-1.299-.545h-2.461c-.824 0-1.449.415-1.765 1.172-.529 1.345-2.015 4.111-3.129 5.09-.034-1.387-.011-2.446.007-3.233.036-1.535.152-3.029-1.441-3.029h-3.868c-.998 0-1.953 1.09-.919 2.384.904 1.134.325 1.766.52 4.912-.76-.815-2.112-3.016-3.068-5.829-.268-.761-.674-1.466-1.817-1.466h-2.461c-.998 0-1.594.544-1.594 1.455 0 2.046 4.529 13.544 12.145 13.544zm-8.09-13.499c.217 0 .239 0 .4.457.979 2.883 3.175 7.149 4.779 7.149 1.205 0 1.205-1.235 1.205-1.7l-.001-3.702c-.066-1.225-.512-1.835-.805-2.205l3.508.004c.002.017-.02 4.095.01 5.083 0 1.403 1.114 2.207 2.853.447 1.835-2.071 3.104-5.167 3.155-5.293.075-.18.14-.241.376-.241h2.461.01c-.001.003-.001.006-.002.009-.225 1.05-2.446 4.396-3.189 5.435-.012.016-.023.033-.034.05-.327.534-.593 1.124.045 1.954h.001c.058.07.209.234.429.462.684.706 3.03 3.12 3.238 4.08-.138.022-.288.006-2.613.011-.495 0-.882-.74-2.359-2.23-1.328-1.292-2.19-1.82-2.975-1.82-1.524 0-1.413 1.237-1.399 2.733.005 1.622-.005 1.109.006 1.211-.089.035-.344.105-1.009.105-6.345 0-10.477-10.071-10.636-11.996.055-.005.812-.002 2.546-.003z"/>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/" class="footer__social-block">
+                <svg width="30" fill="white" viewBox="-110 1 511 511.99996" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m180 512h-81.992188c-13.695312 0-24.835937-11.140625-24.835937-24.835938v-184.9375h-47.835937c-13.695313 0-24.835938-11.144531-24.835938-24.835937v-79.246094c0-13.695312 11.140625-24.835937 24.835938-24.835937h47.835937v-39.683594c0-39.347656 12.355469-72.824219 35.726563-96.804688 23.476562-24.089843 56.285156-36.820312 94.878906-36.820312l62.53125.101562c13.671875.023438 24.792968 11.164063 24.792968 24.835938v73.578125c0 13.695313-11.136718 24.835937-24.828124 24.835937l-42.101563.015626c-12.839844 0-16.109375 2.574218-16.808594 3.363281-1.152343 1.308593-2.523437 5.007812-2.523437 15.222656v31.351563h58.269531c4.386719 0 8.636719 1.082031 12.289063 3.121093 7.878906 4.402344 12.777343 12.726563 12.777343 21.722657l-.03125 79.246093c0 13.6875-11.140625 24.828125-24.835937 24.828125h-58.46875v184.941406c0 13.695313-11.144532 24.835938-24.839844 24.835938zm-76.8125-30.015625h71.632812v-193.195313c0-9.144531 7.441407-16.582031 16.582032-16.582031h66.726562l.027344-68.882812h-66.757812c-9.140626 0-16.578126-7.4375-16.578126-16.582031v-44.789063c0-11.726563 1.191407-25.0625 10.042969-35.085937 10.695313-12.117188 27.550781-13.515626 39.300781-13.515626l36.921876-.015624v-63.226563l-57.332032-.09375c-62.023437 0-100.566406 39.703125-100.566406 103.609375v53.117188c0 9.140624-7.4375 16.582031-16.578125 16.582031h-56.09375v68.882812h56.09375c9.140625 0 16.578125 7.4375 16.578125 16.582031zm163.0625-451.867187h.003906zm0 0"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/" class="footer__social-block">
+                <svg id="regular" fill="white" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="29"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="m4.75 24h14.5c2.619 0 4.75-2.131 4.75-4.75v-14.5c0-2.619-2.131-4.75-4.75-4.75h-14.5c-2.619 0-4.75 2.131-4.75 4.75v14.5c0 2.619 2.131 4.75 4.75 4.75zm-3.25-19.25c0-1.792 1.458-3.25 3.25-3.25h14.5c1.792 0 3.25 1.458 3.25 3.25v14.5c0 1.792-1.458 3.25-3.25 3.25h-14.5c-1.792 0-3.25-1.458-3.25-3.25z"/>
+                    <path d="m12 18.13c3.38 0 6.13-2.75 6.13-6.13s-2.75-6.13-6.13-6.13-6.13 2.75-6.13 6.13 2.75 6.13 6.13 6.13zm0-10.76c2.553 0 4.63 2.077 4.63 4.63s-2.077 4.63-4.63 4.63-4.63-2.077-4.63-4.63 2.077-4.63 4.63-4.63z"/>
+                    <path d="m18.358 7.362c.986 0 1.729-.74 1.729-1.721 0-1.023-.782-1.721-1.728-1.721-.986 0-1.729.74-1.729 1.721 0 1.021.778 1.721 1.728 1.721zm.177-1.886c.316.279-.405.618-.405.166 0-.27.367-.2.405-.166z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="footer__call">
+            <div class="footer__numbers">
+                <div class="footer__number">+912 19 999 99 99</div>
+                <div class="footer__number">+912 72 733 93 93</div>
+            </div>
+            <button class="button footer__button orderCall">Заказать звонок</button>
+        </div>
+        <div class="footer__conditions">
+            <div class="footer__rights">©2024. Все права защищены</div>
+            <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/a15bab6050028753706f22c32fe60627a7be79f9/"
+               class="footer__confidencial">Политика конфиденциальности</a>
+        </div>
+    </div>
+    <div class="footer__left-img wow wow animate__slideInDown">
+        <img src="assets/images/footerPictureLeft.png" alt="flower">
+    </div>
+</footer>
+<div class="modalWrap">
+    <div class="modalOrder">
+        <div class="modalOrder__wrap">
+            <div class="modalOrder__close close">
+                <svg fill="#cacaca" stroke="none" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="25px" height="25px" viewBox="0 0 803.000000 805.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,805.000000) scale(0.100000,-0.100000)"
+                    >
+                        <path d="M3855 8004 c-22 -2 -103 -8 -180 -14 -628 -49 -1249 -257 -1802 -606
+                            -539 -340 -1012 -832 -1327 -1382 -215 -377 -367 -780 -451 -1197 -165 -824
+                            -75 -1656 260 -2410 274 -617 698 -1152 1245 -1572 351 -269 801 -499 1235
+                            -632 922 -283 1910 -225 2790 164 621 275 1177 719 1591 1273 896 1197 1041
+                            2819 372 4157 -166 331 -332 580 -566 846 -685 780 -1605 1255 -2622 1354
+                            -157 15 -471 26 -545 19z m-934 -2127 c44 -21 153 -126 564 -537 l510 -510
+                            520 519 c495 494 523 520 580 541 48 18 75 21 135 18 128 -8 142 -17 437 -311
+                            227 -225 269 -271 296 -327 28 -57 32 -74 31 -145 -1 -141 18 -117 -562 -697
+                            l-517 -518 517 -517 c583 -584 561 -556 561 -703 1 -138 -7 -150 -320 -462
+                            -316 -315 -327 -322 -471 -316 -70 2 -97 8 -135 28 -34 18 -200 177 -556 532
+                            -279 280 -512 508 -517 508 -5 0 -243 -233 -529 -519 -579 -578 -546 -551
+                            -689 -551 -135 0 -138 2 -449 310 -322 318 -332 332 -332 465 0 149 -27 116
+                            558 702 l521 522 -515 515 c-583 584 -564 560 -564 706 0 134 7 144 309 448
+                            144 145 276 272 294 284 90 56 228 62 323 15z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="modalOrder__info">
+                <h3 class="section-title modalOrder__title">Оформление заказа</h3>
+                <div class="modalOrder__text">Запомните данные для оформления заказа</div>
+                <form action="#" class="modalOrder__form">
+                    <label>
+                        <span class="modalOrder__labelText">1. Личные данные</span>
+                        <input class="modalOrder__input modalOrder__input-name" type="text" placeholder="Ваше имя">
+                        <span class="errorOrderName error">Пожалуйста, ведите Ваше имя!</span>
+                    </label>
+                    <label>
+                        <input class="modalOrder__input modalOrder__input-phone" type="text" placeholder="Ваш телефон">
+                        <span class="errorOrderPhone error">Пожалуйста, ведите Ваш телефон!</span>
+                    </label>
+                    <label>
+                        <textarea class="modalOrder__textArea" placeholder="Детали вашего заказа"></textarea>
+                        <span class="errorOrderDetails error">Пожалуйста, ведите детали заказа!</span>
+                    </label>
+                    <button type="button" class="button modalBtn modalOrder__button">Заказать</button>
+                </form>
+            </div>
+            <div class="modalOrder__img">
+                <img src="assets/images/modalOrder.png" alt="picture">
+            </div>
+        </div>
+    </div>
+    <div class="modalThanks">
+        <div class="modalThanks__wrap">
+            <div class="modalThanks__close close">
+                <svg fill="#cacaca" stroke="none" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="25px" height="25px" viewBox="0 0 803.000000 805.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,805.000000) scale(0.100000,-0.100000)"
+                    >
+                        <path d="M3855 8004 c-22 -2 -103 -8 -180 -14 -628 -49 -1249 -257 -1802 -606
+                            -539 -340 -1012 -832 -1327 -1382 -215 -377 -367 -780 -451 -1197 -165 -824
+                            -75 -1656 260 -2410 274 -617 698 -1152 1245 -1572 351 -269 801 -499 1235
+                            -632 922 -283 1910 -225 2790 164 621 275 1177 719 1591 1273 896 1197 1041
+                            2819 372 4157 -166 331 -332 580 -566 846 -685 780 -1605 1255 -2622 1354
+                            -157 15 -471 26 -545 19z m-934 -2127 c44 -21 153 -126 564 -537 l510 -510
+                            520 519 c495 494 523 520 580 541 48 18 75 21 135 18 128 -8 142 -17 437 -311
+                            227 -225 269 -271 296 -327 28 -57 32 -74 31 -145 -1 -141 18 -117 -562 -697
+                            l-517 -518 517 -517 c583 -584 561 -556 561 -703 1 -138 -7 -150 -320 -462
+                            -316 -315 -327 -322 -471 -316 -70 2 -97 8 -135 28 -34 18 -200 177 -556 532
+                            -279 280 -512 508 -517 508 -5 0 -243 -233 -529 -519 -579 -578 -546 -551
+                            -689 -551 -135 0 -138 2 -449 310 -322 318 -332 332 -332 465 0 149 -27 116
+                            558 702 l521 522 -515 515 c-583 584 -564 560 -564 706 0 134 7 144 309 448
+                            144 145 276 272 294 284 90 56 228 62 323 15z"/>
+                    </g>
+                </svg>
+            </div>
+            <h3 class="section-title modalThanks__title">Спасибо за ваш заказ!</h3>
+            <div class="modalThanks__text">После оформления заказа мы свяжемся с вами, чтобы подтвердить заказ. На
+                следующий день после оформления заказа ваша посылка будет отправлена в место назначения. Когда ваш заказ
+                прибудет в почтовое отделение, вам придет sms-оповещение на указанный номер телефона.
+            </div>
+            <button class="button modalThanks__button">Продолжить закупки</button>
+        </div>
+    </div>
+    <div class="modalCall">
+        <div class="modalCall__wrap">
+            <div class="modalCall__close close">
+                <svg fill="#cacaca" stroke="none" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="25px" height="25px" viewBox="0 0 803.000000 805.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,805.000000) scale(0.100000,-0.100000)"
+                    >
+                        <path d="M3855 8004 c-22 -2 -103 -8 -180 -14 -628 -49 -1249 -257 -1802 -606
+                            -539 -340 -1012 -832 -1327 -1382 -215 -377 -367 -780 -451 -1197 -165 -824
+                            -75 -1656 260 -2410 274 -617 698 -1152 1245 -1572 351 -269 801 -499 1235
+                            -632 922 -283 1910 -225 2790 164 621 275 1177 719 1591 1273 896 1197 1041
+                            2819 372 4157 -166 331 -332 580 -566 846 -685 780 -1605 1255 -2622 1354
+                            -157 15 -471 26 -545 19z m-934 -2127 c44 -21 153 -126 564 -537 l510 -510
+                            520 519 c495 494 523 520 580 541 48 18 75 21 135 18 128 -8 142 -17 437 -311
+                            227 -225 269 -271 296 -327 28 -57 32 -74 31 -145 -1 -141 18 -117 -562 -697
+                            l-517 -518 517 -517 c583 -584 561 -556 561 -703 1 -138 -7 -150 -320 -462
+                            -316 -315 -327 -322 -471 -316 -70 2 -97 8 -135 28 -34 18 -200 177 -556 532
+                            -279 280 -512 508 -517 508 -5 0 -243 -233 -529 -519 -579 -578 -546 -551
+                            -689 -551 -135 0 -138 2 -449 310 -322 318 -332 332 -332 465 0 149 -27 116
+                            558 702 l521 522 -515 515 c-583 584 -564 560 -564 706 0 134 7 144 309 448
+                            144 145 276 272 294 284 90 56 228 62 323 15z"/>
+                    </g>
+                </svg>
+            </div>
+            <h3 class="section-title modalCall__title">Заказать звонок</h3>
+            <div class="modalCall__text">Пожалуйста, введите Ваш телефон</div>
+            <form action="#" class="modalCall__form">
+                <label>
+                    <input class="modalCall__input" type="text" placeholder="Ваш телефон">
+                    <span class="error">Пожалуйста, ведите Ваш телефон!</span>
+                </label>
+                <button type="button" class="button modalBtnCall modalCall__button">Перезвоните мне</button>
+            </form>
+            <div class="modalCall__img">
+                <img src="assets/images/bottomlistsGift.png" alt="picture">
+            </div>
+        </div>
+    </div>
+    <div class="modalImg">
+        <div class="modalImg__wrap">
+            <div class="modalImg__close close">
+                <svg fill="#cacaca" stroke="none" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="25px" height="25px" viewBox="0 0 803.000000 805.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,805.000000) scale(0.100000,-0.100000)"
+                    >
+                        <path d="M3855 8004 c-22 -2 -103 -8 -180 -14 -628 -49 -1249 -257 -1802 -606
+                            -539 -340 -1012 -832 -1327 -1382 -215 -377 -367 -780 -451 -1197 -165 -824
+                            -75 -1656 260 -2410 274 -617 698 -1152 1245 -1572 351 -269 801 -499 1235
+                            -632 922 -283 1910 -225 2790 164 621 275 1177 719 1591 1273 896 1197 1041
+                            2819 372 4157 -166 331 -332 580 -566 846 -685 780 -1605 1255 -2622 1354
+                            -157 15 -471 26 -545 19z m-934 -2127 c44 -21 153 -126 564 -537 l510 -510
+                            520 519 c495 494 523 520 580 541 48 18 75 21 135 18 128 -8 142 -17 437 -311
+                            227 -225 269 -271 296 -327 28 -57 32 -74 31 -145 -1 -141 18 -117 -562 -697
+                            l-517 -518 517 -517 c583 -584 561 -556 561 -703 1 -138 -7 -150 -320 -462
+                            -316 -315 -327 -322 -471 -316 -70 2 -97 8 -135 28 -34 18 -200 177 -556 532
+                            -279 280 -512 508 -517 508 -5 0 -243 -233 -529 -519 -579 -578 -546 -551
+                            -689 -551 -135 0 -138 2 -449 310 -322 318 -332 332 -332 465 0 149 -27 116
+                            558 702 l521 522 -515 515 c-583 584 -564 560 -564 706 0 134 7 144 309 448
+                            144 145 276 272 294 284 90 56 228 62 323 15z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="modalImg__imgBlock">
+                <img class="modalImg__img" src="assets/images/gallery/photo2.png" alt="photo">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="arrowUp">
+    <svg width="34" height="34" stroke="white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 5V19"  stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M18 11L12 5"  stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M6 11L12 5"  stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/wow.js/dist/wow.min.js"></script>
+<script type="module" src="src/js/script.js"></script>
+</body>
+</html>
