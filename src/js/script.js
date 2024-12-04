@@ -201,7 +201,7 @@ $(document).ready(function () {
                             modalOrderInputDetails.val('');
                             body.css('overflowY', '');
                         } else if (msg.success === 1) {
-                            modalThanks.css('display', 'block');
+                            modalThanks.css('display', 'flex');
                             modalOrder.css('display', 'none');
                             body.css('overflowY', '');
                         }

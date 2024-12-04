@@ -555,6 +555,19 @@
     }
   }
 
+  .modalThanks {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__wrap {
+      padding: 100px 10vw 220px 10vw;
+      max-width: 470px;
+    }
+  }
+
+
   .modalOrder {
     width: calc(100vw - 70px);
   }
