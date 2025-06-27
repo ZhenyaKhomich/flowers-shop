@@ -89,7 +89,9 @@ export class ProductCartComponent implements OnInit {
   }
 
   clickToCart(url: string) {
-    this.router.navigate(['/product/' + url]);
+    if(this.isLight) {
+      this.router.navigate(['/product/' + url]);
+    }
   }
 
   updateFavorite(id: string) {

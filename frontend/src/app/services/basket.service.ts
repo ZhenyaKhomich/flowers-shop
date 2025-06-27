@@ -20,7 +20,7 @@ export class BasketService {
   }
 
   getBasket(): Observable<BasketType | DefaultResponseType> {
-    return this.http.get<BasketType | DefaultResponseType>(environment.api + 'cart', {withCredentials: true} );
+    return this.http.get<BasketType | DefaultResponseType>(environment.api + 'cart', {withCredentials: true});
   }
 
   updateBasket(productId: string, quantity: number): Observable<BasketType | DefaultResponseType> {
