@@ -1,3 +1,5 @@
-@use "app/style/_variables" as *;
-@use "app/style/_fonts";
-@use "app/style/_global";
+@use "app/styles/_variables" as *;
+@use "app/styles/_fonts";
+@use "app/styles/_global";
+
+//html, body { height: 100%; }

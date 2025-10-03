@@ -25,5 +25,4 @@ export class LayoutComponent implements OnInit {
       this.categories = categories;
     })
   }
-
 }

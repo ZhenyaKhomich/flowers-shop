@@ -1,4 +1,4 @@
-@use "../../../style/_variables" as *;
+@use "../../../styles/_variables" as *;
 
 .header {
   padding: 30px 0 49px 0;
@@ -52,6 +52,7 @@
           }
         }
       }
+
       .header-top-phone {
         font-size: 16px;
         color: $green-text-color;
@@ -66,6 +67,7 @@
         a {
           margin-right: 8px;
           position: relative;
+          cursor: pointer;
 
           &:last-child {
             margin-right: 18px;
