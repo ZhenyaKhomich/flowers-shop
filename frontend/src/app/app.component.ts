@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import localeRu from '@angular/common/locales/ru';
+import {registerLocaleData} from '@angular/common';
+registerLocaleData(localeRu);
 
 @Component({
   selector: 'app-root',

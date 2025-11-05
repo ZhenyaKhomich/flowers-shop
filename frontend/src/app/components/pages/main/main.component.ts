@@ -4,10 +4,8 @@ import {ProductCartComponent} from '../../common/product-cart/product-cart.compo
 import {ProductService} from '../../../services/product.service';
 import {ProductType} from '../../../../types/product.type';
 import {NgForOf, registerLocaleData} from '@angular/common';
-import localeRu from '@angular/common/locales/ru';
 import {CarouselModule, OwlOptions} from 'ngx-owl-carousel-o';
 import {environment} from '../../../../environments/environment';
-registerLocaleData(localeRu);
 
 @Component({
   selector: 'app-main',
@@ -114,7 +112,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.ProductService.getBestProducts().subscribe((products:ProductType[]) => {
-      console.log(products);
       this.products = products;
     })
   }
