@@ -8,6 +8,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {DefaultResponseType} from '../../../../types/default-response.type';
 import {HttpErrorResponse} from '@angular/common/http';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {CategoryWithTypeType} from '../../../../types/category-with-type.type';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class HeaderComponent implements OnInit {
   private AuthService = inject(AuthService);
   private snakeBar = inject(MatSnackBar);
   private router = inject(Router);
-  @Input() categories: CategoryType[] = [];
+  @Input() categories: CategoryWithTypeType[] = [];
 
   isLoggedIn: boolean = false;
 

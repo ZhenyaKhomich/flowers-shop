@@ -4,6 +4,7 @@ import {FooterComponent} from '../footer/footer.component';
 import {RouterOutlet} from '@angular/router';
 import {CategoryType} from '../../../../types/category.type';
 import {CategoryService} from '../../../services/category.service';
+import {CategoryWithTypeType} from '../../../../types/category-with-type.type';
 
 @Component({
   selector: 'app-layout',
@@ -18,11 +19,13 @@ import {CategoryService} from '../../../services/category.service';
 
 export class LayoutComponent implements OnInit {
   private CategoryService = inject(CategoryService);
-  categories: CategoryType[] = [];
+  categories: CategoryWithTypeType[] = [];
 
   ngOnInit(): void {
-    this.CategoryService.getCategories().subscribe((categories: CategoryType[]) =>{
-      this.categories = categories;
+    this.CategoryService.getCategoriesWithTypes().subscribe((categories: CategoryWithTypeType[]) =>{
+      this.categories = categories.map(item => {
+        return Object.assign({typesUrl: item.types.map(el => el.url)}, item)
+      });
     })
   }
 }
