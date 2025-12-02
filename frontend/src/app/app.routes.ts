@@ -23,7 +23,7 @@ export const routes: Routes = [
         loadComponent: () => import('./components/pages/catalog/catalog/catalog.component').then(m => m.CatalogComponent)
       },
       {
-        path: 'detail',
+        path: 'product/:url',
         loadComponent: () => import('./components/pages/catalog/detail/detail.component').then(m => m.DetailComponent)
       },
     ]

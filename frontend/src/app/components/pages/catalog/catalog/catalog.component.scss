@@ -1,4 +1,5 @@
 @use '../../../../styles/_variables' as *;
+@use '../../../../styles/_mixins' as *;
 
 .catalog {
   padding-top: 100px;
@@ -6,9 +7,7 @@
 
   .container {
     .catalog-title {
-      font-family: 'Lora', sans-serif;
-      font-size: 36px;
-      font-weight: 400;
+      @include head-lora-36;
       color: $green-text-color;
       margin-top: 33px;
       margin-left: 317px;

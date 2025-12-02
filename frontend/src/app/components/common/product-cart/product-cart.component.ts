@@ -1,9 +1,10 @@
 import { Component, Input,} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ProductType} from '../../../../types/product.type';
-import {CurrencyPipe, NgIf} from '@angular/common';
+import {CurrencyPipe, NgIf, NgStyle} from '@angular/common';
 import {environment} from '../../../../environments/environment';
 import {FormsModule} from '@angular/forms';
+import {CountSelectorComponent} from '../count-selector/count-selector.component';
 
 
 @Component({
@@ -13,7 +14,9 @@ import {FormsModule} from '@angular/forms';
     RouterLink,
     CurrencyPipe,
     NgIf,
-    FormsModule
+    FormsModule,
+    CountSelectorComponent,
+    NgStyle
   ],
   templateUrl: './product-cart.component.html',
   styleUrl: './product-cart.component.scss'
