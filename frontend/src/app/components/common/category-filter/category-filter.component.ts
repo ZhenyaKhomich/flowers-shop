@@ -32,9 +32,7 @@ export class CategoryFilterComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
-
       this.activeParams = ActiveParamsUtil.processParams(params);
-
       if(this.type) {
         if(this.type === 'height') {
           if(this.activeParams.heightFrom || this.activeParams.heightTo) {

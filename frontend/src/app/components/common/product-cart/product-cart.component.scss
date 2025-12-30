@@ -6,6 +6,10 @@
   box-sizing: border-box;
   position: relative;
 
+  &.isLight {
+    height: auto;
+  }
+
   .product-cart-favorite {
     position: absolute;
     top: 12px;

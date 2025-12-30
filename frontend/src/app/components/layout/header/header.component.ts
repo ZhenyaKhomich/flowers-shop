@@ -9,6 +9,8 @@ import {DefaultResponseType} from '../../../../types/default-response.type';
 import {HttpErrorResponse} from '@angular/common/http';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {CategoryWithTypeType} from '../../../../types/category-with-type.type';
+import {BasketService} from '../../../services/basket.service';
+import {Subject} from 'rxjs';
 
 
 @Component({
@@ -26,20 +28,31 @@ import {CategoryWithTypeType} from '../../../../types/category-with-type.type';
 
 export class HeaderComponent implements OnInit {
   private AuthService = inject(AuthService);
+  private BasketService = inject(BasketService);
   private snakeBar = inject(MatSnackBar);
   private router = inject(Router);
   @Input() categories: CategoryWithTypeType[] = [];
 
   isLoggedIn: boolean = false;
+  count: number = 0;
+
 
   constructor() {
     this.isLoggedIn = this.AuthService.getIsLoggedIn();
   }
 
   ngOnInit() {
+    this.BasketService.count$.subscribe(count => {
+      this.count = count;
+    })
     this.AuthService.isLogged$.subscribe((isLoggedIn: boolean) => {
       this.isLoggedIn = isLoggedIn;
     })
+
+    this.BasketService.getBasketCount()
+      .subscribe(data => {
+        this.count = data.count;
+      })
   }
 
   logout(): void {

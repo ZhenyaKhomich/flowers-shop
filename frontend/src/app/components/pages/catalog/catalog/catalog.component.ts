@@ -12,6 +12,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ActiveParamsUtil} from '../../../../utils/active-params.util';
 import {ActiveParamsType} from '../../../../../types/active-params.type';
 import {AppliedFilterType} from '../../../../../types/appliedFilter.type';
+import {BasketService} from '../../../../services/basket.service';
+import {BasketType} from '../../../../../types/basket.type';
 
 @Component({
   selector: 'catalog',
@@ -30,6 +32,7 @@ export class CatalogComponent implements OnInit {
 
   private ProductsService = inject(ProductService);
   private CategoryService = inject(CategoryService);
+  private BasketService = inject(BasketService);
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
   products: ProductType[] = [];
@@ -37,15 +40,20 @@ export class CatalogComponent implements OnInit {
   activeParams: ActiveParamsType = {types: []};
   appliedFilters: AppliedFilterType[] = [];
   sortingOpen: boolean = false;
-  sortingOptions: {name: string; value: string}[] = [
+  sortingOptions: { name: string; value: string }[] = [
     {name: 'От А до Я', value: 'az-asc'},
     {name: 'От Я до А', value: 'az-desc'},
     {name: 'По возрастанию цены', value: 'price-asc'},
     {name: 'По убыванию цены', value: 'price-desc'}
   ];
-  pages:number[] = [];
+  pages: number[] = [];
+  noFound: boolean = false;
+  basket: BasketType | null = null;
 
   ngOnInit(): void {
+    this.BasketService.getBasket().subscribe((data: BasketType) => {
+      this.basket = data;
+    })
     this.CategoryService.getCategoriesWithTypes().subscribe({
       next: (categories) => {
         if (categories && categories.length > 0) {
@@ -101,14 +109,27 @@ export class CatalogComponent implements OnInit {
             this.ProductsService.getProducts(this.activeParams).subscribe({
               next: (products) => {
                 if (products.items && products.items.length > 0) {
-                  this.products = products.items;
                   this.pages = [];
-                  for(let i = 1; i <= products.pages; i++) {
+                  for (let i = 1; i <= products.pages; i++) {
                     this.pages.push(i);
                   }
-
+                  if(this.basket && this.basket.items.length > 0) {
+                    this.products = products.items.map((product) => {
+                      const productInBasket = this.basket?.items.find((item) => {
+                        return item.product.id === product.id;
+                      })
+                      if(productInBasket) {
+                        product.countInBasket = productInBasket.quantity;
+                      }
+                      return product;
+                    });
+                  } else {
+                    this.products = products.items;
+                  }
+                  this.noFound = false;
                 } else {
                   this.products = [];
+                  this.noFound = true;
                 }
               },
               error: (error: HttpErrorResponse) => {
@@ -141,18 +162,18 @@ export class CatalogComponent implements OnInit {
     this.sortingOpen = !this.sortingOpen;
   }
 
-  sort(value:string): void {
+  sort(value: string): void {
     this.activeParams.sort = value;
     this.router.navigate(['/catalog'], {queryParams: this.activeParams});
   }
 
-  openPage(page: number ): void {
+  openPage(page: number): void {
     this.activeParams.page = page;
     this.router.navigate(['/catalog'], {queryParams: this.activeParams});
   }
 
   openPrevPage() {
-    if(this.activeParams.page && this.activeParams.page > 1) {
+    if (this.activeParams.page && this.activeParams.page > 1) {
       this.activeParams.page -= 1;
       this.router.navigate(['/catalog'], {queryParams: this.activeParams});
     }
@@ -160,7 +181,7 @@ export class CatalogComponent implements OnInit {
   }
 
   openNextPage() {
-    if(this.activeParams.page && this.activeParams.page < this.pages.length) {
+    if (this.activeParams.page && this.activeParams.page < this.pages.length) {
       this.activeParams.page += 1;
       this.router.navigate(['/catalog'], {queryParams: this.activeParams});
     }

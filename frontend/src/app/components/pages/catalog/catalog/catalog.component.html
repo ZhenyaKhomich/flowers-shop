@@ -40,8 +40,8 @@
         <category-filter type="diameter"></category-filter>
       </div>
       <div class="catalog-products" [class.noProducts]="products.length === 0">
-        <product-cart *ngFor="let product of products" [product]="product"></product-cart>
-        <div class="notFound" *ngIf="products.length === 0">
+        <product-cart [countInBasket]="product.countInBasket ?? 0" *ngFor="let product of products" [product]="product"></product-cart>
+        <div class="notFound" *ngIf="noFound">
           По вашему запросу ничего не найдено! <br> Попробуйте поменять параметры поиска!
           <img src="/images/pages/noFound.png" alt="notFound">
         </div>

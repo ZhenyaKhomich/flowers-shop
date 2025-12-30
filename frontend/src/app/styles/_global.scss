@@ -71,6 +71,29 @@ html, body {
     background-color: gray;
     cursor: not-allowed;
   }
+
+  &.buttonInBasket span {
+    &:first-child {
+      display: block;
+    }
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  &:hover {
+    &.buttonInBasket span {
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        display: block;
+        padding: 0 10px;
+      }
+    }
+  }
 }
 
 a.button {
@@ -112,4 +135,14 @@ a.button {
       }
     }
   }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
